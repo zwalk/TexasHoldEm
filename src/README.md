@@ -13,12 +13,15 @@ The show’s producer has come to you for a favor. It seems the play-by-play ann
 
 BOB: Each player’s cards for the round will be on a separate line of the input. Each card is a pair of characters, the first character represents the face, the second is the suit. Cards are separated by exactly one space. Here’s a sample hand.
 
+```
   Kc 9s Ks Kd 9d 3c 6d
   9c Ah Ks Kd 9d 3c 6d
   Ac Qc Ks Kd 9d 3c
   9h 5s
   4d 2d Ks Kd 9d 3c 6d
   7s Ts Ks Kd 9d
+  ```
+  
 YOU: Okay, I was going ask what character to use for 10, but I guess ’T’ is it. And ‘c’, ’d’, ‘h’ and ’s’ for the suits, makes sense. Why aren’t seven cards listed for every player?
 
 BOB: Well, if a player folds, only his hole cards and the community cards he’s seen so far are shown.
@@ -27,12 +30,15 @@ YOU: Right. And why did the fifth player play with a 4 and 2? They’re suited, 
 
 BOB: Stay on topic. Now, the end result of your code should generate output that looks like this:
 
+```
   Kc 9s Ks Kd 9d 3c 6d Full House (winner)
   9c Ah Ks Kd 9d 3c 6d Two Pair
   Ac Qc Ks Kd 9d 3c 
   9h 5s 
   4d 2d Ks Kd 9d 3c 6d Flush
   7s Ts Ks Kd 9d 
+  ```
+  
 YOU: Okay, so I repeat the cards, list the rank or nothing if the player folded, and the word “winner” in parenthesis next to the winning hand. Do you want the cards rearranged at all?
 
 BOB: Hmmm… we can get by without it, but if you have the time, do it. Don’t bother for folded hands, but for ranked hands, move the cards used to the front of the line, sorted by face. Kickers follow that, and the two unused cards go at the end, just before the rank is listed.
